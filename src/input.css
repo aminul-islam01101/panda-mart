@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply m-[0_auto] w-95 max-w-7xl px-0 sm:w-90 ;
+  }
+  .container-short {
+    @apply m-[0_auto] w-95 max-w-6xl px-0 sm:w-85 ;
+  }
+
+  .btn {
+    @apply inline-block whitespace-nowrap rounded-md border-0 bg-pest-200 px-4 py-1.5 font-semibold uppercase text-slate-500 outline-none;
+  }
+  .container-fluid {
+    @apply w-full px-0;
+  }
+ 
+}
+.fixed-top {
+  @apply fixed top-0 right-0 left-0 z-[1030];
+}

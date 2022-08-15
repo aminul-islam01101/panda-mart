@@ -1,0 +1,52 @@
+<div class="ml-3">
+              <div class="flex flex-wrap justify-center space-x-2">
+                <div
+                  class=""
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Tooltip bottom"
+                >
+                  <input type="checkbox" name="" id="checkbox" class="hidden" />
+                  <label for="checkbox" class="cursor-pointer">
+                    <div
+                      class="p2 flex h-5 w-9 items-center rounded-full bg-gray-300"
+                    >
+                      <div
+                        class="switch-ball h-4 w-4 rounded-full bg-white shadow"
+                      ></div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+
+
+               <script>
+      const checkbox = document.querySelector('#checkbox');
+      const html = document.querySelector('html');
+
+      const toggleDarkMode = function () {
+        checkbox.checked
+          ? html.classList.add('dark')
+          : html.classList.remove('dark');
+      };
+
+      //calling the function directly
+
+      toggleDarkMode();
+      checkbox.addEventListener('click', toggleDarkMode);
+    </script>
+
+    <script
+      src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new Tooltip(tooltipTriggerEl);
+      });
+    </script>
