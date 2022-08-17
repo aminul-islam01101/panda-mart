@@ -457,11 +457,10 @@
     </section>
     <!-- category ends  -->
 
-    <!-- card starts -->
+    <!--shoe card starts -->
 
     <section class="bg-gray-100 py-10">
       <div class="container-short">
-        <!-- shoes -->
         <article class="backpack mb-10">
           <header class="flex justify-between">
             <h3 class="mb-3 text-3xl font-semibold">Shoes</h3>
@@ -470,7 +469,7 @@
             >
           </header>
           <section
-            class="grid gap-10 text-center sm:grid-cols-2 md:grid-cols-3"
+            class="cards grid gap-10 text-center sm:grid-cols-2 md:grid-cols-3"
           >
             <!-- item 1 -->
             <div class="space-y-3 rounded-lg bg-white p-3 shadow-lg">
@@ -513,8 +512,12 @@
             </div>
           </section>
         </article>
+      </div>
+    </section>
 
-        <!-- backpack -->
+    <!-- backpack cards start  -->
+    <section class="bg-gray-100 py-10" id="backpack">
+      <div class="container-short">
         <article class="mb-10">
           <header class="flex justify-between">
             <h3 class="mb-3 text-3xl font-semibold">Backpack</h3>
@@ -523,7 +526,7 @@
             >
           </header>
           <section
-            class="grid gap-10 text-center sm:grid-cols-2 md:grid-cols-3"
+            class="cards grid gap-10 text-center sm:grid-cols-2 md:grid-cols-3"
           >
             <!-- item 1 -->
             <div class="space-y-3 rounded-lg bg-white p-3 shadow-lg">
@@ -572,22 +575,30 @@
     <!-- card ends -->
     <!-- newsletter starts -->
     <section
-      class="container my-10 mx-auto grid w-60 items-center space-y-3 rounded-lg bg-[#FFF2F1] py-20 text-center"
+      class="container my-10 mx-auto grid w-80 items-center space-y-3 rounded-lg bg-[#FFF2F1] py-20 text-center justify-center"
     >
-      <h3 class="text-3xl">LET'S STAY IN TOUCH</h3>
+      <h3 class="text-3xl" id="h3">LET'S STAY IN TOUCH</h3>
       <p class="text-sm">Get updates on sales specials and more</p>
       <form action="" class="flex justify-center gap-0">
         <input
-          type="text"
+          type="email"
           name=""
-          id=""
+          id="email"
           placeholder="Enter your email"
-          class="min-w-[150px] max-w-60 rounded-l rounded-r-none pl-4 text-xs outline-none"
+          class="w-1/2 min-w-[150px] rounded-l rounded-r-none pl-4 text-xs outline-none"
+         
         />
-        <a href="#" class="btn rounded-l-none bg-red-500 capitalize text-white"
-          >Send</a
-        >
+        <input
+          type="button"
+          id="submit"
+          class="btn cursor-pointer rounded-l-none bg-red-500 text-white disabled:bg-gray-400"
+          value="Send"
+         
+       
+        />
       </form>
+     
+     
     </section>
 
     <!-- newsletter ends -->
@@ -617,7 +628,7 @@
       var tooltipTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="tooltip"]')
       );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      var tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
         return new Tooltip(tooltipTriggerEl);
       });
     </script>
